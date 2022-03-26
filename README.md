@@ -28,7 +28,7 @@ The player will gain points for each alien he kills, when the player gains certa
 
 2. Interactive and customizable difficulty, health and points gained  
 
-3. The speed of the aliens coming down will increase randomly so that will cover the first requirement i.e Generation of random game    sets or events  
+3. The speed of the aliens coming down will increase. We will also include random power up drops so that will cover the first requirement i.e Generation of random game    sets or events  
 
 4. Use File input/output to store the status of the game after every wave of aliens after which the user can quit the game or            continue. If the player chooses the quit then the game can be loaded at a later time  
 
