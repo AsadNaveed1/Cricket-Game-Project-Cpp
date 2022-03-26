@@ -9,7 +9,7 @@ Sumer Kaistha 3035859448
 
 We will make a space invaders game where aliens will come down from the top of the screen and try to reach the bottom. You can control the ship at the bottom and move it left or right as well as shoot a bullet to kill the aliens.  
 
-If an alien reaches the bottom then the player will lose one life. Additionally, if the alien touches the ship the game is over. The game can be customizable with the number of lives and difficulty level of the game.
+If an alien reaches the bottom then the player will lose one life. The game can be customizable with the number of lives and difficulty level of the game.
 
 The player will gain points for each alien he kills, when the player gains certain level of points he will face a big alien that he has to kill.
 
