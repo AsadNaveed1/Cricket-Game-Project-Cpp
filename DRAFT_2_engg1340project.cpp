@@ -185,8 +185,10 @@ void save_and_quit_game(int &innings, int &overs, int &curr_ball, bool &player_b
     fout.close();
     delete_cricketer_array(user_cricketers_arr, user_num_cricketers);
     delete_cricketer_array(ai_cricketers_arr, ai_num_cricketers);
+    exit(0);
 }
 
+// TODO: Handle case when file does not exist (load chosen before any save) or when file is empty
 void initialize_game(char load_flag, int &innings, int &overs, int &curr_ball, bool &player_batting_bool, int &user_num_cricketers, int &ai_num_cricketers, Cricketer** &user_cricketers_arr, Cricketer** &ai_cricketers_arr) {
     if(load_flag == 'n') {
         innings = 1;
@@ -280,7 +282,7 @@ void start_game() {
     cout << "Do you want to load the game from the previous saved session? y/n" << endl;
     cin >> load_flag;
 
-    while(load_flag != 'y' || load_flag != 'n') {
+    while(load_flag != 'y' && load_flag != 'n') {
         cout << "Please enter only y or n" << endl;
         cin >> load_flag;
     }
@@ -291,6 +293,7 @@ void start_game() {
     string bowl="player2";
 
     initialize_game(load_flag, innings, overs, curr_ball, player_batting_bool, user_num_cricketers, ai_num_cricketers, user_cricketers_arr, ai_cricketers_arr);
+    // save_and_quit_game(innings, overs, curr_ball, player_batting_bool, user_num_cricketers, ai_num_cricketers, user_cricketers_arr, ai_cricketers_arr);
 
     int balls = overs * 6;
 
