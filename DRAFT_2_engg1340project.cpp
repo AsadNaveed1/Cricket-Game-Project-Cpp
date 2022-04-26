@@ -7,91 +7,61 @@
 using namespace std;
 
 
+
 void game_name(){
     
     cout << endl;
-    
-    cout << "\t|-----------------------------------------------------------|\n" << endl;
-
-
-                                   
-    cout << "              ██████╗██████╗ ██╗ ██████╗██╗  ██╗███████╗████████╗"<<endl;
-    cout << "             ██╔════╝██╔══██╗██║██╔════╝██║ ██╔╝██╔════╝╚══██╔══╝"<<endl;
-    cout << "             ██║     ██████╔╝██║██║     █████╔╝ █████╗     ██║   "<<endl;
-    cout << "             ██║     ██╔══██╗██║██║     ██╔═██╗ ██╔══╝     ██║   "<<endl;
-    cout << "             ╚██████╗██║  ██║██║╚██████╗██║  ██╗███████╗   ██║   "<<endl;
-    cout << "              ╚═════╝╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝   "<<endl;
-                                                                 
-
-                                                    
-
-  
-                                                    
-    
-    cout << "\t" << endl;
-    cout << "\t|----------------------------------------------------------|\n" << endl;
+    cout << "|-----------------------------------------------------------|\n" << endl;
+    cout << " ██████╗██████╗ ██╗ ██████╗██╗  ██╗███████╗████████╗"<<endl;
+    cout << "██╔════╝██╔══██╗██║██╔════╝██║ ██╔╝██╔════╝╚══██╔══╝"<<endl;
+    cout << "██║     ██████╔╝██║██║     █████╔╝ █████╗     ██║   "<<endl;
+    cout << "██║     ██╔══██╗██║██║     ██╔═██╗ ██╔══╝     ██║   "<<endl;
+    cout << "╚██████╗██║  ██║██║╚██████╗██║  ██╗███████╗   ██║   "<<endl;
+    cout << " ╚═════╝╚═╝  ╚═╝╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝   "<<endl;
+    cout << endl;
+    cout << "|----------------------------------------------------------|\n" << endl;
 }
 
-void mainmenu()
+void main_menu()
 {
-    
-    cout << "\n\n\t";
-   
-    cout << "MAIN MENU :-";
-    
-    cout << "\n\n\t1.Start a new game" << endl;
-    cout << "\n\t2.Instructions" << endl;
-    cout << "\n\tPress any other key to exit the game" << endl;
-    cout << "\n\tEnter your descision: ";
+    cout << "\n\nMAIN MENU :-";
+    cout << "\n\n1. Start a new game" << endl;
+    cout << "\n2. Instructions" << endl;
+    cout << "\nPress any other key to end the program" << endl;
+    cout << "\nEnter your decision: ";
     
 }
 void instructions()
 {
-    game_name();
-    cout <<"\n";
-    
-    cout << "\t\t\t\tINSTRUCTIONS AND RULES";
-
-    cout << "\n";
-    cout << "\n\t1. You have to choose which format you want to play."<<endl;
-    cout << "\n\t2. If you won a toss, you have to choose what you will do, i.e., Batting or Balling."<<endl;
-    cout <<"\n\t3. You have to choose a number between 1 and 6 during your turn."<<endl;
-    cout <<"\n\t4. If your descision and your opponents descision are same, then the person who is batting is considered as OUT."<<endl;
-    cout <<"\n\t5. One who scores more during their batting is declared as WINNER."<<endl;
-    cout <<"\n\t6. If both scores same, then the result will be 'DRAW'."<<endl;
-    
-    cout << "\n\n\t\tPress '0' to go back to main menu....";
-    
+    cout << endl;
+    cout << "INSTRUCTIONS AND RULES";
+    cout << endl;
+    cout << "1. You have to choose which format you want to play."<<endl;
+    cout << "2. If you win the toss, you have to choose whether you want to bat or bowl."<<endl;
+    cout << "3. You have to choose a number between 1 and 6 when it's your turn."<<endl;
+    cout << "4. If your decision and your opponents decision are same, then the player who is batting is out."<<endl;
+    cout << "5. One who scores more during their batting is declared as WINNER."<<endl;
+    cout << "6. If both scores same, then the result will be a draw."<<endl;    
 }
 bool toss()
 {    
-    char descision;
-    int t,c;
-    
-    cout << "\n\n\t\t\tWELCOME TO TOSS!\n";
+    int coin_side_chosen, coin_side_landed;
+
+    cout << "\n\nWELCOME TO TOSS!\n";
    
-    cout << "\n\t Player 1 Choose your call:\n\t1. HEADS or 2. TAILS:\t";
-    cin >>descision;
-    if((descision=='h'||descision=='H'||descision=='1'))
-    { 
-        c=1;
-    }
-    else if((descision=='t'||descision=='T'||descision=='2'))
-    { 
-        c=2;
-    }
-    srand(time(0));
-    t = rand()%2+1;
-    if((t==1&&c==1 )||(t==2&&c==2))
+    cout << "\n Player 1 Choose your call:\n Please enter '1' for Heads and '2' for Tails ";
+    cin >> coin_side_chosen;
+    coin_side_landed = rand()%2+1;
+    if(coin_side_landed == coin_side_chosen)
     {
         
-        cout << "\n\n\t********************\tPlayer 1 You've won the Toss\t********************" << endl;
+        cout << "\n\n******************** You've won the Toss ********************" << endl;
         return true;
     }
     else
     {
         
-        cout << "\n\n\t********************\tPlayer 2 You've won the Toss\t********************" << endl;
+        cout << "\n\n******************** You've lost the Toss ********************" << endl;
         return false;
     }
 }
@@ -100,14 +70,14 @@ int player()
 {   
     int res;
     
-    cout << "\n\tPlayer 1 Choose a number between 1 and 6: ";
+    cout << "\nPlayer 1 Choose a number between 1 and 6: ";
     while(1)
     {
         cin >> res;
         if(res>6||res<1)
         {
             
-            cout << "\tPlease select a number between 1 and 6: ";
+            cout << "Please select a number between 1 and 6: ";
             continue;
         }
         else
@@ -123,14 +93,14 @@ int player2()
 {  
     int res;
     
-    cout << "\n\tPlayer 2 Choose a number between 1 and 6: ";
+    cout << "\nPlayer 2 Choose a number between 1 and 6: ";
     while(1)
     {
         cin >> res;
         if(res>6||res<1)
         {
             
-            cout << "\tPlease select a number between 1 and 6: ";
+            cout << "Please select a number between 1 and 6: ";
             continue;
         }
         else 
@@ -145,13 +115,13 @@ int comp()
 { 
     int res;
 
-    cout << "\n\tPlayer 1 input a number to deliver a ball: ";
+    cout << "\nPlayer 1 input a number to deliver a ball: ";
 
     cin>>res;
 
     res = rand()%6+1;
     
-    cout << "\n\tThe ball delivered by Player 1 is: " << res << endl;
+    cout << "\nThe ball delivered by Player 1 is: " << res << endl;
     return res;
 }
 
@@ -159,92 +129,61 @@ int comp2()
 { 
     int res;
 
-    cout << "\n\tPlayer 2 input a number to ball: ";
+    cout << "\nPlayer 2 input a number to ball: ";
 
     cin>>res;
 
     res = rand()%6+1;
     
-    cout << "\n\tThe ball delivered by Player 2 is: " << res << endl;
+    cout << "\nThe ball delivered by Player 2 is: " << res << endl;
     return res;
 }
 
 void start_game()
 {
     game_name();
+    srand(time(0));
     
+    cout << "\n\n\n";
     
-    cout << "\n\n\n\t\t\t\t";
+    cout << "GAME STARTS!!!"<<endl;
     
-    cout << "    GAME STARTS!!!"<<endl;
+    int side_choice, overs, balls, t1, t2;
+    int player_score=0, player2_score=0, b=0, first=0, second=0;  
+    string bat, bowl;    
     
-    int descision,Overs,balls, t1,t2;
-    int player_score=0,player2_score=0,b=0,first=0,second=0;  
-    string bat,bal;    
-    
-    cout << "\n\tHow many Overs match would you like to have?\n\t1. 1 Over Match\n\t2. 2 Over Match\n\t3. 5 Over Match\n\t\tEnter your descision: ";
-    cin>>Overs;
-    while(1)
-    {   
-        if(Overs==1)
-        {
-            balls = 6;
-            break;
-        }
-        else if(Overs==2)
-        {
-            balls = 12;
-            break;
-        }
-        else if(Overs==3)
-        {
-            balls = 30;
-            break;
-        
-        }
-        else
-        {
-            
-            cout << "\n\tPlease select a valid format!";
-            continue;
-        }
-    }
+    cout << "\nHow many Overs match would you like to have?";
+    cin >> overs;
+    balls = overs * 6;
     bool toss_result = toss();
-    bool out=false;
+    bool out = false;
     if(toss_result)
     {    
-        cout << "\n\tSelect your descision:\n\t1.Batting\t\t2.Balling\n\t";
-        cin >> descision;
-        if(descision==1)
-        {
-            bat = "player";
-            bal = "player2";
-        }
-        else
-        {
-            bat = "player2";
-            bal = "player";
-        }
+        cout << "\nSelect your side:\n Please enter '1' for batting and '2' for bowling\n";
+        cin >> side_choice;
     }
     else
     {
-        cout << "\n\tWhat would you like to do first:\n\t1.Batting\t\t2.Balling\n\t";
-        cin >> descision;
-        if(descision==1)
-        {
-            bat = "player2";
-            bal = "player";
-        }
-        else
-        {
-            bat = "player";
-            bal = "player2";
-        }
+        side_choice = rand()%2 + 1;
+    }
+    if(side_choice == 1)
+    {
+        bat = "Player";
+        bowl = "AI";
+    }
+    else if (side_choice = 2)
+    {
+        bowl = "Player";
+        bat = "AI";
+    }
+    else
+    {
+        cout << "Please only enter '1' or '2' to select your choice";
     }
     
-    cout << "\n\n\t\t\t\t";
+    cout << "\n\n";
    
-    cout << "     FIRST INNINGS";
+    cout << "FIRST INNINGS";
     
     if(bat=="player") 
     {
@@ -257,7 +196,7 @@ void start_game()
             {
                 out = true;
             
-                cout << "\n\tIt's OUT!!!\n";
+                cout << "\nIt's OUT!!!\n";
             }
             else
             {
@@ -279,7 +218,7 @@ void start_game()
             {
                 out = true;
             
-                cout << "\n\tIt's OUT!!!\n";
+                cout << "\nIt's OUT!!!\n";
             }
             else
             {
@@ -294,14 +233,14 @@ void start_game()
     if(bat=="player")
     {
         bat = "player2";
-        bal = "player";
+        bowl = "player";
         first = player_score;
         
-        cout << "\n\tFirst Innings Ended!!\n";
+        cout << "\nFirst Innings Ended!!\n";
        
-        cout<<"\n\tPlayer 1 Score is "<< first <<endl;
+        cout<<"\nPlayer 1 Score is "<< first <<endl;
    
-        cout << "\n\n\t\t\t\t";
+        cout << "\n\n";
        
         cout << "SECOND INNINGS";
         
@@ -309,15 +248,15 @@ void start_game()
     }
     else
     {
-        bal = "player2";
+        bowl = "player2";
         bat = "player";
         first = player2_score;
         
-        cout << "\n\tFirst Innings Ended!!\n";
+        cout << "\nFirst Innings Ended!!\n";
        
-        cout<<"\n\tPlayer 2 Score is "<< first <<endl;
+        cout<<"\nPlayer 2 Score is "<< first <<endl;
    
-        cout << "\n\n\t\t\t\t";
+        cout << "\n\n";
        
         cout << "SECOND INNINGS";
         
@@ -337,7 +276,7 @@ void start_game()
             {
                 out = true;
             
-                cout << "\n\tIt's OUT!!!\n";
+                cout << "\nIt's OUT!!!\n";
             } 
             else
             {
@@ -360,7 +299,7 @@ void start_game()
             {
                 out = true;
             
-                cout << "\n\tIt's OUT!!!\n";
+                cout << "\nIt's OUT!!!\n";
             } 
             else
             {
@@ -378,104 +317,84 @@ void start_game()
     if(bat=="player")
     {
         
-        cout << "\n\tSecond Innings Ended!!\n";
+        cout << "\nSecond Innings Ended!!\n";
        
-        cout <<"\n\tPlayer 1 Score is "<< second <<endl;
+        cout <<"\nPlayer 1 Score is "<< second <<endl;
         
         cout <<"=============================================================================================================";
    
-        cout << "\n\n\t\t\t\t\t";
+        cout << "\n\n";
        
         cout << "RESULT";
         if(first>second) 
         {
             
-            cout << "\n\n\t\t\t\t    Player 2 WON!!";
+            cout << "\n\n    Player 2 WON!!";
         }
         else if(first == second) 
         {
         
-            cout << "\n\n\t\t\t\t\tMatch Draw!!";
+            cout << "\n\nMatch Draw!!";
         }
         else
         {
            
-            cout << "\n\n\t\t\t\t    Player 1 Won!!";
+            cout << "\n\n    Player 1 Won!!";
         }
     }
     else
     {
         
-        cout << "\n\tSecond Innings Ended!!\n\n";
+        cout << "\nSecond Innings Ended!!\n\n";
        
-        cout <<"\tPlayer 2 Score is "<< second <<endl;
+        cout <<"Player 2 Score is "<< second <<endl;
         
         cout <<"=============================================================================================================";
    
-        cout << "\n\n\t\t\t\t\t";
+        cout << "\n\n";
        
         cout << "RESULT";
         if(first>second) 
         {
            
-            cout << "\n\n\t\t\t\t    Player 1 Won!!";
+            cout << "\n\n    Player 1 Won!!";
         }
         else if(first == second) 
         {
             
-            cout << "\n\n\t\t\t\t\tMatch Draw!!";
+            cout << "\n\nMatch Draw!!";
         }
         else 
         {
             
-            cout << "\n\n\t\t\t\t    Player 2 Won!!";
+            cout << "\n\n    Player 2 Won!!";
         }
     }
     
     cout <<"\n\n=============================================================================================================";
    
-    cout << "\n\n\t\tPress '0' to return to main menu....";
+    cout << "\n\nPress '0' to return to main menu....";
     
 }
 int main()
 {
-    srand(time(NULL));
-
     while(1)
     {
-        game_name();
-
-        mainmenu();
-
-        char descision;
-        cin >> descision;
-        if(descision=='1')
+        game_name()
+        main_menu();
+        char main_menu_choice, return_to_menu;
+        cin >> main_menu_choice;
+        if(main_menu_choice == '1')
         {
-            start_game();
-            char ch;
-            cin >> ch;
-            while(ch!='0')
-            {
-                
-                cout << "\t\tPress '0' to return to main menu....";
-                
-                cin >> ch;
-            }
-            continue;
+            start_game();       
+            cout << "Press any key to return to main menu...";
+            cin >> return_to_menu;
         }
-        else if(descision=='2')
+        else if(main_menu_choice == '2')
         {
             instructions();
-            char character;
-            cin >> character;
-            while(character!='0')
-            {
-                
-                cout << "\t\t\tPress '0' to return to main menu....";
-                
-                cin >> character;
-            }
-            continue;
+            cout << "Press any key to return to main menu...";
+            cin >> return_to_menu;
         }
         else
         {
