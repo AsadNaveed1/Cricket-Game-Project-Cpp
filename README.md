@@ -7,7 +7,10 @@ Sumer Kaistha 3035859448
 
 ## Game Description:-
 
-We have made a cricket game, the idea came from the hand cricket game which is a pretty common game in South Asia just like rock paper scissors. There are two people in the hand cricket game, first there is a toss at the start and the person who wins the toss decides if he wants to bat first or ball first.
+We have made a cricket game, the idea came from the hand cricket game which is a pretty common game in South Asia just like rock paper scissors. 
+
+There are two people in the hand cricket game, first there is a toss at the start and the person who wins the toss decides if he wants to bat first or ball first. So the person batting has to show a finger of his hand to make runs. For example if the person shows 2 of his fingers he gets 2 runs, if he shows a thumbs up he will get 6 runs, when the person batting is showing his fingers at the same time the opponent who is bowling will also show his finger if he shows the same finger as the person who is batting the person who is batting is out and now it is the opponent's turn to bat. At the end of the game the person with more runs will win the match.
+
 
 
 ## Game Rules:-
@@ -28,11 +31,13 @@ We have made a cricket game, the idea came from the hand cricket game which is a
 
 8. Each player will get a chance to bat and bowl in the same match
 
-9. The team that scores more during their batting is declared as the WINNER
+9. The team that scores more during their batting is declared as the WINNER at the end of the match
 
 10. If both teams score the same, then the result will be a draw
 
 ### Enjoy!!!
+
+
 
 ## Features:-
 
