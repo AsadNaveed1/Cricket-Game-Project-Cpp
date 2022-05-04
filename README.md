@@ -7,20 +7,32 @@ Sumer Kaistha 3035859448
 
 ## Game Description:-
 
-We will make a space invaders game where aliens will come down from the top of the screen and try to reach the bottom. You can control the ship at the bottom and move it left or right as well as shoot a bullet to kill the aliens.  
-
-If an alien reaches the bottom then the player will lose one life. The game can be customizable with the number of lives and difficulty level of the game.
-
-The player will gain points for each alien he kills, when the player gains certain level of points he will face a big alien that he has to kill.
+We have made a cricket game, the idea came from the hand cricket game which is a pretty common game in South Asia just like rock paper scissors. There are two people in the hand cricket game, first there is a toss at the start and the person who wins the toss decides if he wants to bat first or ball first.
 
 
 ## Game Rules:-
 
-1. You have to kill the alliens coming down  
-2. The spaceship at the bottom has to shoot to kill the alliens and simultaneously dodge the aliens  
-3. If the aliens pass the spaceship then the space ship will lose health (hp)  
-4. If the alien touches the spaceship the game is over  
-5. You need to click the save option to save the game after a certain stage you can not simply quit otherwise no data will be saved  
+1. First there will be a toss, you have to choose either heads or tails
+
+2. If you win the toss, you have to choose whether you want to bat or bowl 
+
+3. You have to choose which format you want to play (How many overs you want per innings. There are 6 balls per over)
+
+4. Then you will have to decide how many players you would have on your team and on the opponents team  
+
+5. You have to choose a number between 1 and 6 when it's your turn for batting
+
+6. If your decision and your opponent's decision are the same, then the player who is batting is out
+
+7. When all the players in the team are out then the first innings (the first part of the game) is over and the second innings will be started
+
+8. Each player will get a chance to bat and bowl in the same match
+
+9. The team that scores more during their batting is declared as the WINNER
+
+10. If both teams score the same, then the result will be a draw
+
+### Enjoy!!!
 
 ## Features:-
 
