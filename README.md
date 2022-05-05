@@ -13,7 +13,7 @@ The game we have made is a User vs AI game. To start with, there is a toss. If t
 
 
 
-## Game Rules/ Instrunctions:-
+## Game Rules/ Instructions:-
 
 1. First there will be a toss, you have to choose either heads or tails. If you win the toss, you have to choose whether you want to bat or bowl.
 
