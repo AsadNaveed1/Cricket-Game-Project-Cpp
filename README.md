@@ -7,21 +7,21 @@ Sumer Kaistha 3035859448
 
 ## Game Description:-
 
-We have made a cricket game based on a hand cricket game which is commonly played in India just like rock paper scissors. 
+We have made a cricket game based on a hand cricket game which is commonly played in India and Pakistan just like rock paper scissors. 
 
 The game we have made is a User vs AI game. To start with, there is a toss. If the user wins the toss, he gets to choose whether to start with batting or bowling. The player is then asked to input a number from 1 - 6. If the player is batting then the runs he gets is equivalent to the number input. For example if the person inputs 2, he gets 2 runs. The opponent (AI) who is bowling will also choose a number from 1 - 6 and if the number chosen is the same as the number chosen by the player who is batting, the player who is batting is out and now and it moves onto the next player in the team. Once all player's are out then the user and the AI switch sides from batting to bowling or vice verse. At the end of the game the team with more runs will win the match.
 
 
 
-## Game Rules:-
+## Game Rules/ Instrunctions:-
 
 1. First there will be a toss, you have to choose either heads or tails. If you win the toss, you have to choose whether you want to bat or bowl.
 
 2. You have to choose which format you want to play (How many overs you want per innings. There are 6 balls per over).
 
-3.  You will have to decide how many players to have on your team and the opponent's team.  
+3. You will have to decide how many players to have on your team and the opponent's team.  
 
-4. You have to choose a number between 1 and 6 when it's your turn.
+4. You have to choose a number between 1 and 6 when it's your turn or you can choose to save and quit.
 
 5. If your decision and your opponent's decision are the same, then the player who is batting is out
 
@@ -29,8 +29,15 @@ The game we have made is a User vs AI game. To start with, there is a toss. If t
 
 7. The team that scores more during their batting is declared as the WINNER at the end of the match. If both teams score the same, then the result will be a draw
 
+( Note: you can choose to continue your prevously saved session once the game starts )
+
 ### Enjoy!!!
 
+
+## Compilation Commmand:-
+
+First run "make main" in the terminal
+Then run "main" to start the game
 
 
 ## Features:-
