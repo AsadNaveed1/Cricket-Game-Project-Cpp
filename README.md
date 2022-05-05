@@ -37,7 +37,7 @@ The game we have made is a User vs AI game. To start with, there is a toss. If t
 ## Compilation Commmand:-
 
 First run "make main" in the terminal     
-Then run "main" to start the game
+Then run "./main" to start the game
 
 
 ## Features:-
