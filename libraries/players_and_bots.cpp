@@ -5,6 +5,7 @@
 #include "./ai.h"
 
 // This function takes an input from 1 - 6 or 'q' from the player and returns it
+// It has no input values into the function and returns the number chosen by the user
 int player() {   
     int move;
     std::cout << "Choose a number between 1 and 6, or choose 0 to save and quit: ";
@@ -19,6 +20,7 @@ int player() {
 
 // This function makes the move for the AI by using the smart_batting_choice() and smarat_bowling_choice() functions
 // For the first ball of the innings, the user has no previous moves stored in the deque and so the ai move is based only a random number from 1 - 6
+// It takes in the deque, current ball, and which team is currently batting and returns the the number chosen by the smart AI (from 1 - 6) 
 int comp(std::deque<int> &smart_ai_mem, int &curr_ball, bool &player_batting_bool) {
     if(curr_ball == 0) {
         int move = rand() % 6 + 1;

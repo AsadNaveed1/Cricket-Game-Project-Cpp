@@ -9,6 +9,7 @@
 #include "./game_mechanics.h"
 
 // This function saves the current game state, which includes all the current variable values and the data types to the save file
+// It takes in all the variables and data structures used in the game and has no return value
 void save_and_quit_game(int &innings, int &overs, int &curr_ball, bool &player_batting_bool, int &user_current_player, int &ai_current_player, int &user_score, int &ai_score, int &user_num_cricketers, int &ai_num_cricketers, Cricketer** &user_cricketers_arr, Cricketer** &ai_cricketers_arr, std::deque<int> &smart_ai_mem) {
     std::ofstream fout;
     fout.open(SAVE_FILE_NAME);
@@ -56,6 +57,7 @@ void save_and_quit_game(int &innings, int &overs, int &curr_ball, bool &player_b
 }
 
 // Initializes the variables required by the game. The variables are initialized from the save file if the user wants a previous game to be loaded, otherwise it is initialized with default values
+// It takes in all the variables and data structures used in the game and has no return value
 void initialize_game(char load_flag, int &innings, int &overs, int &curr_ball, bool &player_batting_bool, int &user_current_player, int &ai_current_player, int &user_score, int &ai_score, int &user_num_cricketers, int &ai_num_cricketers, Cricketer** &user_cricketers_arr, Cricketer** &ai_cricketers_arr, std::deque<int> &smart_ai_mem) {
     // Loading the game by initializing variables with default values
     if(load_flag == 'n') {

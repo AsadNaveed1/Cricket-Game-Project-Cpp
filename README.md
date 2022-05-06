@@ -9,7 +9,7 @@ Sumer Kaistha 3035859448
 
 We have made a cricket game based on a hand cricket game which is commonly played in India and Pakistan just like rock paper scissors. 
 
-The game we have made is a User vs AI game. To start with, there is a toss. If the user wins the toss, he gets to choose whether to start with batting or bowling. The player is then asked to input a number from 1 - 6. If the player is batting then the runs he gets is equivalent to the number input. For example if the person inputs 2, he gets 2 runs. The opponent (AI) who is bowling will also choose a number from 1 - 6 and if the number chosen is the same as the number chosen by the player who is batting, the player who is batting is out and now and it moves onto the next player in the team. Once all player's are out then the user and the AI switch sides from batting to bowling or vice verse. At the end of the game the team with more runs will win the match.
+The game we have made is a User vs AI game. To start with, there is a toss. If the user wins the toss, he gets to choose whether to start with batting or bowling. The player can then customize the game as he or she wishes. For example - The user can customize their team size, their opponent's team size and the number of overs. The player is then asked to input a number from 1 - 6. If the player is batting then the runs he gets is equivalent to the number input. For example if the person inputs 2, he gets 2 runs. The opponent (AI) who is bowling will also choose a number from 1 - 6 and if the number chosen is the same as the number chosen by the player who is batting, the player who is batting is out and now and it moves onto the next player in the team. Once all player's are out then the user and the AI switch sides from batting to bowling or vice verse. At the end of the game the team with more runs will win the match.
 
 
 
@@ -42,12 +42,30 @@ Then run "./main" to start the game
 
 ## Features:-
 
-1. Structs are created to hold information about each player (Cricketer) and data structures suuch as an array of the struct cricketer will be used to store all the cricketers on a team.
+1. Structs are created to hold information about each player (Cricketer) and data structures suuch as an array of the struct cricketer will be used to store all the cricketers on a team. This covers the second requirement, i.e. Data Structures for storing the game status
 
-2. Interactive and customizable team sizes for both the opponent and user as well as customizable number of overs per innings. The team is stored in an array and hence, dyanmic memory management is used in the game to allow for customization of the game. 
+2. Interactive and customizable team sizes for both the opponent and user as well as customizable number of overs per innings. The team is stored in an array and hence, dyanmic memory management is used in the game to allow for customization of the game. This covers the third requirement, i.e. Dynamic Memory Management
 
-3. The AI uses a random generation of numbers from 1 - 6 as well the user's previous inputs to generate two possible choices from 1 - 6. The two options are then chosen from randomly at 7:3 ratio. This covers the first requirement, i.e Generation of random game sets or events.
+3. The AI uses a random generation of numbers from 1 - 6 as well the user's previous inputs to generate two possible choices from 1 - 6. The two options are then chosen from randomly at 7:3 ratio. This covers the first requirement, i.e. Generation of random game sets or events.
 
-4. Use File input/output to store the status of the game. The user can choose to save and quit the game at any time during the game. If the player chooses the quit then the game can be loaded at a later time.  
+4. Use File input/output to store the status of the game. The user can choose to save and quit the game at any time during the game. If the player chooses the quit then the game can be loaded at a later time. This covers the fourth requirement, i.e. File input/output for saving and loading game status.
 
-5. Using makefile to compile different files with each file holding information about different functions of the game.
+5. Using makefile to compile different files with each file holding information about different functions of the game. This covers the fifth requirement, i.e. Program code in multiple files
+
+## Function and Files
+
+1. Main File: Allows the user to start a game, read the instructions or exit the game
+
+2. AI File: Holds the function to allow for a Smart AI choices
+
+3. Constants File: Holds all the constant variables which do not change throughout the program
+
+4. Cricketer File: Holds the definition of the struct 'Cricketer' and the function to delete the cricketer array
+
+5. Game Mechanics File: Holds the functions that are used in the game mechanics. For example - toss function or switch_teams function
+
+6. Game File: Holds the functions for outputting information about the game. For example - functions for outputting the main menu, game name, results, the user move and ai move
+
+7. Players and Bots File: Functions for returning the move of the user and the AI
+
+8. Saving and Loading File: Functions for Initializing the variables in the game (loading the game) and for saving the values of the variables to a text file and quitting the game (saving and quitting the game)

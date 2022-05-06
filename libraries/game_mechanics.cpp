@@ -5,6 +5,8 @@
 #include "./constants.h"
 
 // This function starts the toss and allows you to choose to start with the batting or bowling side if you win the toss
+// It takes the variable that checks whether the user is batting ('player_batting_bool') as an input and sets 'player_batting_bool' to either true or false depending on the results of the toss
+// It has no return value
 void toss(bool &player_batting_bool) {    
     int coin_side_chosen, coin_side_landed;
 
@@ -44,6 +46,7 @@ void toss(bool &player_batting_bool) {
 }
 
 // Switches the batting and bowling sides in a cricket match
+// It takes in the variable that checks whether the user is batting currently (player_batting_bool) and returns the team that isn't batting as the team that is batting (sets true to false and vice versa)
 void switch_teams(bool &player_batting_bool) {
     if (player_batting_bool == true) {
         player_batting_bool = false;

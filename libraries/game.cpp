@@ -11,6 +11,7 @@
 #include "./cricketer.h"
 
 // This function is used for printing out the game name
+// It takes no inputs and returns no value
 void game_name() {
     std::cout << std::endl;
     std::cout << "|" << std::setw(2 * PRETTY_PRINT_NUM) << std::setfill('-') << DUMMY_CHAR << "|" << std::endl << std::endl;
@@ -25,15 +26,17 @@ void game_name() {
 }
 
 // This function prints out the main menu screen with options to choose from for the player
+// It takes in no inputs and returns no value
 void main_menu() {
     std::cout << "MAIN MENU:" << std::endl;
-    std::cout << "1. Start a new game" << std::endl;
+    std::cout << "1. Start a game" << std::endl;
     std::cout << "2. Instructions" << std::endl;
     std::cout << "Press any other key to end the program" << std::endl << std::endl;
     std::cout << "Enter your decision: ";
 }
 
 // This function prints out the instruction of the game
+// It takes in no inputs and returns no value
 void instructions() {
     std::cout << std::endl;
     std::cout << "INSTRUCTIONS AND RULES:";
@@ -47,6 +50,7 @@ void instructions() {
 }
 
 // This function loops through the dynamic arrays which hold your team of cricketers and the opponent's team of cricketers (AI) and outputs the best player statistics as well as your final result
+// It takes in the arrays, the size of the arrays, and the user and AI scores and it returns no value
 void results(int &user_score, int &ai_score, int &user_num_cricketers, int &ai_num_cricketers, Cricketer** &user_cricketers_arr, Cricketer** &ai_cricketers_arr) {
     int user_best_batter_index = 0, ai_best_batter_index = 0, user_best_bowler_index = 0, ai_best_bowler_index = 0;
     int user_best_batter_score = 0, ai_best_batter_score = 0, user_best_bowler_score = 0, ai_best_bowler_score = 0;
@@ -98,6 +102,7 @@ void results(int &user_score, int &ai_score, int &user_num_cricketers, int &ai_n
 // Starts the game and sets srand to current time to start with a unique seed
 // The variables are initialized and then the game begins in a while loop twice - once for batting and once for bowling
 // Once the first innings is completed batting and bowling sides swap and after the second innings, the results are displayed
+// It takes in no input values and has no return value
 void start_game() {
     srand(time(0));
     
