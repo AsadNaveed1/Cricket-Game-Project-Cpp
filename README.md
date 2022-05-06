@@ -1,11 +1,11 @@
 # STAGE 1 - PROPOSAL
 
-## Team members:-
+## Team members:
 
 Muhammad Asad Naveed 3035957848   
 Sumer Kaistha 3035859448  
 
-## Game Description:-
+## Game Description:
 
 We have made a cricket game based on a hand cricket game which is commonly played in India and Pakistan just like rock paper scissors. 
 
@@ -13,7 +13,7 @@ The game we have made is a User vs AI game. To start with, there is a toss. If t
 
 
 
-## Game Rules/ Instructions:-
+## Game Rules/ Instructions:
 
 1. First there will be a toss, you have to choose either heads or tails. If you win the toss, you have to choose whether you want to bat or bowl.
 
@@ -34,13 +34,13 @@ The game we have made is a User vs AI game. To start with, there is a toss. If t
 ### Enjoy!!!
 
 
-## Compilation Commmand:-
+## Compilation Commmand:
 
 First run "make main" in the terminal     
 Then run "./main" to start the game
 
 
-## Features:-
+## Features:
 
 1. Structs are created to hold information about each player (Cricketer) and data structures suuch as an array of the struct cricketer will be used to store all the cricketers on a team. This covers the second requirement, i.e. Data Structures for storing the game status
 
@@ -52,7 +52,7 @@ Then run "./main" to start the game
 
 5. Using makefile to compile different files with each file holding information about different functions of the game. This covers the fifth requirement, i.e. Program code in multiple files
 
-## Function and Files
+## Function and Files:
 
 1. Main File: Allows the user to start a game, read the instructions or exit the game
 
