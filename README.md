@@ -25,7 +25,7 @@ The game we have made is a User vs AI game. To start with, there is a toss. If t
 
 5. If your decision and your opponent's decision are the same, then the player who is batting is out
 
-6. When all the players in the team are out or the total number of balls in the over and thrown then the first innings ends and the teams will switch sides from batting to bowling or vice versa
+6. When all the players in the team are out or the total number of balls are over then the first innings ends and the teams will switch sides from batting to bowling or vice versa
 
 7. The team that scores more during their batting is declared as the WINNER at the end of the match. If both teams score the same, then the result will be a draw
 
