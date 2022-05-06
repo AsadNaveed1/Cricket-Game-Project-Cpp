@@ -41,8 +41,9 @@ void instructions() {
     std::cout << std::endl;
     std::cout << "INSTRUCTIONS AND RULES:";
     std::cout << std::endl;
-    std::cout << "1. You have to choose which format you want to play." << std::endl;
-    std::cout << "2. If you win the toss, you have to choose whether you want to bat or bowl." << std::endl;
+    std::cout << "1. You can choose to load a previous game or start a new game." << std::endl;
+    std::cout << "1. If a new game is started, there is a toss. If you win the toss, you have to choose whether you want to bat or bowl." << std::endl;
+    std::cout << "2. You have to choose how many players you want on your team, the opponent's team and how many overs in an innings." << std::endl;
     std::cout << "3. You have to choose a number between 1 and 6 when it's your turn." << std::endl;
     std::cout << "4. If your decision and your opponents decision are same, then the player who is batting is out." << std::endl;
     std::cout << "5. The team that scores more during their batting is declared as the WINNER." << std::endl;
